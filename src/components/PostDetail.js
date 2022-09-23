@@ -28,8 +28,6 @@ const PostDetail = () => {
         }
         dispatch(clearSelectedPostComment());
     },[postId]);
-    console.log("post",post);
-    console.log("cmt",comments);
 
     const renderCmt = comments.map((comment)=>{
             return (

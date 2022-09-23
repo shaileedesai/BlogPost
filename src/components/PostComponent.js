@@ -11,10 +11,8 @@ const PostComponenet = (props) => {
     const dispatch = useDispatch();
     const handleDelete = async (id) => {
         const response = await axios.delete(`https://jsonplaceholder.typicode.com/posts/${id}`).catch(error=>{console.log(error)});
-        console.log("responseeeeeee",response);
         dispatch(deletePost(id));
     }
-    console.log(props);
     const renderList = props.post.currentData().map((p)=>{
         const {title,body,id} = p;
         return (

@@ -20,7 +20,6 @@ const EditPost = () =>{
     const fetchPostDetail = async () => {
         const response = await axios.get(`https://jsonplaceholder.typicode.com/posts/${postId}`).catch(error=>{console.log(error)});
         dispatch(selectedPost(response.data));
-        console.log("dkjbfghjbvjb",response.data);
         setTitle(response.data.title);
         setBody(response.data.body);
     }
